@@ -12,12 +12,12 @@ They'll be places you are expected to substitute a line for the answer. These ar
 *Replace me with answer*
 We then replace the answer with "**" before and after "**". How many?  Two asterisks before and two after. Why - take a look at markdown.
 
-**whoami**
+**Zhassulan Zhaniyazov**
 
 ## 1. Logging in
 Please login to trgn510.pmed.io and verify that you are in trgn510.pmed.io using hostname.
 
-*Place the unix command here that tell us our host*
+*"hostname" or "hostname -A"*
 ## 2. PATHs and organization.
 There are lots of environmental variables loaded into bash through .bashrc.  One is the $PATH variable.  Any executables within these folders do not require typing a path to run.  For example below we see all the paths where our executables without a path can be located.  In a step below we extend it.
 
@@ -37,7 +37,7 @@ cd ~
 mkdir -p bin projects/assign2
 export PATH=$PATH:~/bin
 cd projects/assign2
-*Place the unix here listing home directory, recursively
+**"ls -R ~"**
 
 ## 3. Shared infrastructure
 who
@@ -54,7 +54,7 @@ Ok - that's too many people who have logged on, lets just pipe it to tail to see
 last | tail
 What if we wanted the first 5 lines - there must be a way to take the head of a file, such as the first 5 lines.
 
-*Place a unix command(s) of first 5 people who logged onto this server using "last'
+**"last -n 5"**
 
 ## 4.  Our network
 I wonder if this server can see the internet.  Can it see google. Lets ping Google with a little message and see how long it takes to respond.
@@ -64,7 +64,7 @@ This provides the time - and is one indicate of the network.  If things are slow
 
 Copy the link to download the file "HG001_GRCh37_GIAB_highconf_CG-IllFB-IllGATKHC-Ion-10X-SOLID_CHROM1-X_v.3.3.2_highconf_PGandRTGphasetransfer.vcf.gz".  On your server, download this by typing wget and the full path of the URL.
 
-*Place a unix command(s) to download using wget NA12878's variants.*
+**"wget wget ftp://ftp-trace.ncbi.nlm.nih.gov/giab/ftp/release/NA12878_HG001/NISTv3.3.2/GRCh37/HG001_GRCh37_GIAB_highconf_CG-IllFB-IllGATKHC-Ion-10X-SOLID_CHROM1-X_v.3.3.2_highconf_PGandRTGphasetransfer.vcf.gz ~/projects/assign2/"**
 
 ## 5.  Example by a person's genome.
 This is the pretty much the genome that has been sequenced by the most platforms the most times, and for which we have identified with highest confidence the genetic variants in that person.  The file ends in ".gz", which means it is zipped.  Unzip it
@@ -72,7 +72,7 @@ This is the pretty much the genome that has been sequenced by the most platforms
 gunzip HG001_GRCh37_GIAB_highconf_CG-IllFB-IllGATKHC-Ion-10X-SOLID_CHROM1-X_v.3.3.2_highconf_PGandRTGphasetransfer.vcf.gz
 This made it plain text readable.  You can preview file using "less", please do that knowing you jump around using vim commands such as control-F.  We notice there are many lines that begin with a "#" forming the header.  We then get to variants which have a format specified in the VCF4.2 spec.  Please paste below the command to download via wget on the server the Spec for VCF 4.2.  You should have wget URL, where URL is the URL of a PDF file.
 
-*Place a unix command(s) to download VCF4.2 spec.*
+**"wget https://samtools.github.io/hts-specs/VCFv4.2.pdf"**
 
 ## 6.  File sizes, and compression.
 What is the size of the uncompressed file and what is the size of the compressed file
