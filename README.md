@@ -64,7 +64,7 @@ This provides the time - and is one indicate of the network.  If things are slow
 
 Copy the link to download the file "HG001_GRCh37_GIAB_highconf_CG-IllFB-IllGATKHC-Ion-10X-SOLID_CHROM1-X_v.3.3.2_highconf_PGandRTGphasetransfer.vcf.gz".  On your server, download this by typing wget and the full path of the URL.
 
-**"wget wget ftp://ftp-trace.ncbi.nlm.nih.gov/giab/ftp/release/NA12878_HG001/NISTv3.3.2/GRCh37/HG001_GRCh37_GIAB_highconf_CG-IllFB-IllGATKHC-Ion-10X-SOLID_CHROM1-X_v.3.3.2_highconf_PGandRTGphasetransfer.vcf.gz ~/projects/assign2/"**
+**"wget ftp://ftp-trace.ncbi.nlm.nih.gov/giab/ftp/release/NA12878_HG001/NISTv3.3.2/GRCh37/HG001_GRCh37_GIAB_highconf_CG-IllFB-IllGATKHC-Ion-10X-SOLID_CHROM1-X_v.3.3.2_highconf_PGandRTGphasetransfer.vcf.gz ~/projects/assign2/"**
 
 ## 5.  Example by a person's genome.
 This is the pretty much the genome that has been sequenced by the most platforms the most times, and for which we have identified with highest confidence the genetic variants in that person.  The file ends in ".gz", which means it is zipped.  Unzip it
@@ -114,7 +114,7 @@ Ok - fail.  Another option is by control-v then 'tab'.  That creates a single ch
 `cut -d "<control-v + tab" -f1 NA12878.variants.vcf | head`
 Did you notice we piped to head?  If you don't do that you'll be waiting for 4 million numbers to go by.  However, what we want is the unique or distinct numbers.  Instead of piping to head what can we pipe to so the output is only the chomosomes?  Ok - the goal of this course is to teach you how to use all languages and comamnds to quickly get to the goal, so google it. Look for a way to print unique results, and sort will probably be involved.  One command, but several pipes.
 
-*Place a unix command that gives unique chromosomes in this individual*
+**"cut -f1 ASSIGNMENT2.variants.vcf | uniq"**
 The result should be this
 
  
@@ -125,12 +125,12 @@ I don't see Y this must be female.  Maybe we should double check.  If they are f
 
 Ok.  That's not quite what I am looking for.  I just want the genotypes.  Instead of head, can you pipe the above result into another pipe, grabbing the first field?
 
-*Place a unix command that gives genotype calls as a single column, knowing we have pipes*
+**"cut -f10 ASSIGNMENT2.variants.vcf | cut -d ":" -f1"**
 
 
 Ok, first what are the "0/1" vs. 0|1 and so forth? This information is in the header. Find out using more and the original file.  Lets count the number of "0|1".  How do we count the number of unique genotypes?  Make sure you understand the command that's helping here - you might need to make sure they are sorted.
 
-*Place a unix command that gives sorted unique genotype calls as a single column.*
+**"cut -f10 ASSIGNMENT2.variants.vcf | cut -d ":" -f1 | sort | uniq -c"**
 
 ## 9.  Python scripting
 If we look at our file, we really have tables in tables.  The info column is column 8.  We've been doing a lot of bash scripting.  We know how to make a bash script.  Lets switch languages and introduce python.  Now - you might hear about perl - but perl isn't just a dead language its a zombie language used by bioinformaticians from the 90s.  Once you learn perl, you won't learn anything else so lets start you on the right foot.  Learning python as the 10th problem of the second assignment, sounds ambitious - but they teach programming to 8 year olds in hour, so why not graduate students.  Basically, instead of #!/usr/bin/bash as the first line, we will do #!/usr/bin/py.  Please create your first python script by typing "vim command.py". 
