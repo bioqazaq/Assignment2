@@ -150,7 +150,7 @@ Lets explain this.  The first line tells us that python will run the remaining l
 
 We have command.py, but we have not made it executable.  Please change the permission such that we can run command.py.
 
-*Place a bash command that makes command.py executable*
+**chmod 755 zz_assignment2.py"**
 
 Now that's executable, we can test it out as we do below, typing './command.py', recognizing that command.py is not in our path, and we must give then the path.  We do this with "./" before the name when we are already in the correct directory.
 
@@ -204,9 +204,9 @@ echo ";gene_symbol=PTEN;gene_name=phospho;gene_sequence=atc;" | match.py -r "gen
 
 So lets try just two last commands. If you need help, you can check out regex101.com
 
-*Provide command that gives gene_name from above, instead of gene_symbol using your new match.py program.*
+**""echo ";gene_symbol=PTEN;gene_name=phospho;gene_sequence=atc;" | pymatch_zz.py -r "gene_name=(.*?);""*
 
-*Provide command that gives gene_name & gene_sequence from above in oneline.*
+**"echo ";gene_symbol=PTEN;gene_name=phospho;gene_sequence=atc;" | pymatch_zz.py -r "gene_name=(.*?);" ; echo ";gene_symbol=PTEN;gene_name=phospho;gene_sequence=atc;" |pymatch_zz.py -r "gene_sequence=(.*?);""*
  
 
 Pages: 1 2 3 4 5 6 7 8
