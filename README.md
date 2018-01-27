@@ -37,6 +37,7 @@ cd ~
 mkdir -p bin projects/assign2
 export PATH=$PATH:~/bin
 cd projects/assign2
+
 **"ls -R ~"**
 
 ## 3. Shared infrastructure
@@ -77,9 +78,9 @@ This made it plain text readable.  You can preview file using "less", please do 
 ## 6.  File sizes, and compression.
 What is the size of the uncompressed file and what is the size of the compressed file
 
-**"gzip -l HG001_GRCh37_GIAB_highconf_CG-IllFB-IllGATKHC-Ion-10X-SOLID_CHROM1-X_v.3.3.2_highconf_PGandRTGphasetransfer.vcf.gz" -command to give size of compressed file**
+**"gzip -l HG001_GRCh37_GIAB_highconf_CG-IllFB-IllGATKHC-Ion-10X-SOLID_CHROM1-X_v.3.3.2_highconf_PGandRTGphasetransfer.vcf.gz" -command to give size of compressed file"**
 
-**"gzip -dc HG001_GRCh37_GIAB_highconf_CG-IllFB-IllGATKHC-Ion-10X-SOLID_CHROM1-X_v.3.3.2_highconf_PGandRTGphasetransfer.vcf.gz | wc -c" or "zcat HG001_GRCh37_GIAB_highconf_CG-IllFB-IllGATKHC-Ion-10X-SOLID_CHROM1-X_v.3.3.2_highconf_PGandRTGphasetransfer.vcf.gz | wc -c" - unix commands those give size of uncompressed file**
+**"gzip -dc HG001_GRCh37_GIAB_highconf_CG-IllFB-IllGATKHC-Ion-10X-SOLID_CHROM1-X_v.3.3.2_highconf_PGandRTGphasetransfer.vcf.gz | wc -c" or "zcat HG001_GRCh37_GIAB_highconf_CG-IllFB-IllGATKHC-Ion-10X-SOLID_CHROM1-X_v.3.3.2_highconf_PGandRTGphasetransfer.vcf.gz | wc -c" - unix commands those give size of uncompressed file"**
 
 That's a fair amount of space.  How much space do we have to work with.  Type 'df -h' to find out.
 
@@ -150,7 +151,7 @@ Lets explain this.  The first line tells us that python will run the remaining l
 
 We have command.py, but we have not made it executable.  Please change the permission such that we can run command.py.
 
-**chmod 755 zz_assignment2.py"**
+**"chmod 755 zz_assignment2.py"**
 
 Now that's executable, we can test it out as we do below, typing './command.py', recognizing that command.py is not in our path, and we must give then the path.  We do this with "./" before the name when we are already in the correct directory.
 
@@ -204,9 +205,9 @@ echo ";gene_symbol=PTEN;gene_name=phospho;gene_sequence=atc;" | match.py -r "gen
 
 So lets try just two last commands. If you need help, you can check out regex101.com
 
-**""echo ";gene_symbol=PTEN;gene_name=phospho;gene_sequence=atc;" | pymatch_zz.py -r "gene_name=(.*?);""*
+**"echo ";gene_symbol=PTEN;gene_name=phospho;gene_sequence=atc;" | pymatch_zz.py -r "gene_name=(.*?);""**
 
-**"echo ";gene_symbol=PTEN;gene_name=phospho;gene_sequence=atc;" | pymatch_zz.py -r "gene_name=(.*?);" ; echo ";gene_symbol=PTEN;gene_name=phospho;gene_sequence=atc;" |pymatch_zz.py -r "gene_sequence=(.*?);""*
+**"echo ";gene_symbol=PTEN;gene_name=phospho;gene_sequence=atc;" | pymatch_zz.py -r "gene_name=(.*?);" ; echo ";gene_symbol=PTEN;gene_name=phospho;gene_sequence=atc;" |pymatch_zz.py -r "gene_sequence=(.*?);""**
  
 
 Pages: 1 2 3 4 5 6 7 8
