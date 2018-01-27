@@ -90,7 +90,7 @@ How would we create a file that only includes variants.  Well 'grep' is a hand c
 grep -v "^#" HG001_GRCh37_GIAB_highconf_CG-IllFB-IllGATKHC-Ion-10X-SOLID_CHROM1-X_v.3.3.2_highconf_PGandRTGphasetransfer.vcf > NA12878.variants.vcf
 How many variants are in the file?  The standard tool to count the number of lines is call 'wc', however you need to actually put a flag for lines.
 
-**"wc -l"*
+**"wc -l"**
 
 Lets look at the contents again using something like more, less, or head (type less and the VCF file name).  We see a space or tab delimited file with chromosome, position in the genome,  the name of a variant if it has a name (dbSNP), the reference base(s), the base in the person or so called alternative base, a quality score, a field saying whether this variant PASS or has another filter field, a series of semi-colon delimited informational fields that are variable in number by line, a field which describes later fields providing genotype.  That field is colon delimited.  We then see a field which gives the genotype for a person, identifying if they have two or one copies of the variant.  If we are using less to view the file, we can see what the space like character is.  Simply, type forward slash (/), and the space character.  You should see spaces highlight.  If we wanted to see tabs, we need to type "control-v", and then the tab character.  We can also see that it is a variable number of spaces.
 
@@ -116,6 +116,7 @@ Ok - fail.  Another option is by control-v then 'tab'.  That creates a single ch
 Did you notice we piped to head?  If you don't do that you'll be waiting for 4 million numbers to go by.  However, what we want is the unique or distinct numbers.  Instead of piping to head what can we pipe to so the output is only the chomosomes?  Ok - the goal of this course is to teach you how to use all languages and comamnds to quickly get to the goal, so google it. Look for a way to print unique results, and sort will probably be involved.  One command, but several pipes.
 
 **"cut -f1 ASSIGNMENT2.variants.vcf | uniq"**
+
 The result should be this
 
  
