@@ -1,4 +1,4 @@
-# Assignment 2:  Share forked copy by 1/27/18
+# Assignment 2 by Zhassulan Zhaniyazov:  Share forked copy by 1/27/18
 Assignment will be 2 will be turned in via your github account.  Please fork, assignment 2 from trgn510.  You can then edit inline at github.  We won't be doing a markdown style yet, but why not try that? Its very nice! You can essentially copy and paste into the README your answers after testing them in the server, replacing the key text.  Analysis must be completed on the server trgn510.pmed.io, and will be used to help assist you in case of issues.   The directory tree must be proper per the assignment.  I'll review your github and the server.
 
 There are different code blocks, those with black text are for you to paste into the command line terminal and observe what happens.  It may create a directory tree, and if this tree isn't created that part of the assignment is not done.  For example:
@@ -17,7 +17,7 @@ We then replace the answer with "**" before and after "**". How many?  Two aster
 ## 1. Logging in
 Please login to trgn510.pmed.io and verify that you are in trgn510.pmed.io using hostname.
 
-*"hostname" or "hostname -A"*
+**"hostname" or "hostname -A"**
 ## 2. PATHs and organization.
 There are lots of environmental variables loaded into bash through .bashrc.  One is the $PATH variable.  Any executables within these folders do not require typing a path to run.  For example below we see all the paths where our executables without a path can be located.  In a step below we extend it.
 
